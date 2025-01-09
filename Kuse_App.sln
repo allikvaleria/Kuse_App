@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuse_App", "Kuse_App\Kuse_A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{278845D9-3A35-4E5F-97B7-117DFA5282C1}"
 	ProjectSection(SolutionItems) = preProject
-		Kuse_App\kutse.jpg = Kuse_App\kutse.jpg
+		..\..\..\..\Downloads\kutse.png = ..\..\..\..\Downloads\kutse.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F7A717C-B45A-456D-8314-C3DDF3684740}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\kutse.png = ..\..\..\..\Downloads\kutse.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
