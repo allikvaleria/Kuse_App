@@ -147,6 +147,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\jaanipaev.jpg" />
+    <Content Include="Images\joulud.jpg" />
+    <Content Include="Images\kutse.jpg" />
+    <Content Include="Images\sad.jpg" />
+    <Content Include="Images\smile.jpg" />
+    <Content Include="Images\uus_aasta.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

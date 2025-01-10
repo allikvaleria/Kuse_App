@@ -2,52 +2,83 @@
     ViewBag.Title = "Tere tulemast peole!";
 }
 
-@{
-    ViewBag.Title = "Tere Tulemast peole!";
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #FFFFFF;
+        }
 
-}
+        .jumbotron {
+            background-color: #5F9EA0; 
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 60px;
+        }
 
-<div class="jumbotron">
-    <h1> @ViewBag.Greeting , Kallis sõber! </h1>
-</div>
+            .jumbotron h1 {
+                font-size: 38px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 5px; 
+            }
 
-<div>
-    @ViewBag.Message
-    <img scr="~/Images/kutse.png" />
+        .jumbotron2 {
+            font-size: 16px; 
+            font-weight: normal; 
+            letter-spacing: 2px; 
+            color: #333333; 
+        }
 
-</div>
+        .message {
+            padding: 20px;
+            background-color: #FFF5EE; 
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 30px;
+            color: #2F4F4F; 
+        }
 
-<div>
+        .btn-primary {
+            background-color: #DB7093; 
+            border-color: #DB7093; 
+            color: white; 
+        }
 
-    @Html.ActionLink("Vastan", "Ankeet", "Ankeet", new { @class = "btn btn-primary" })
-</div>
+            .btn-primary:hover { /*Меняет на другой цвет при наведении*/
+                background-color: #FFC0CB; 
+                border-color: #FFC0CB; 
+            }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+        .img {
+            width: 100%;
+            text-align: center;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>@ViewBag.Greeting, Kallis sõber!</h1>
+            <div class="jumbotron2">
+                <p>Olete oodatud meie üritusele! Õhtul saab olema palju huvitavat!</p>
+            </div>
+        </div>
+        <div class="message">
+            <p>@ViewBag.Message</p>
+        </div>
+        <div class="img">
+            <img src="~/Images/kutse.jpg" alt="Kutset pilt" />
+        </div>
+        <div class="text-center">
+            @Html.ActionLink("Vastan", "Ankeet", "Ankeet", new { @class = "btn btn-primary" })
+        </div>
     </div>
-</main>
+</body>
+</html>

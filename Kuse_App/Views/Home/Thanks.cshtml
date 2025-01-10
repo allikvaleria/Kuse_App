@@ -15,15 +15,24 @@
     {
         @:Ootame sind kallis sõber!
         <p>
-            <img src="ˇ~/Images/kutse.png" />
+            <img src="ˇ~/Images/smile.jpg" />
         </p>
+        using (Html.BeginForm("Meeldetuletus", "Home", FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.Name)
+            @Html.HiddenFor(m => m.Email)
+            @Html.HiddenFor(m => m.Phone)
+            @Html.HiddenFor(m => m.WillAttend)
+            <input type="submit" value="Meeldetuletus" name="Meeldetuletus" />
+        }
     }
     else
     {
-        @:Väga kurb uudis.Mäeme hiljem!
-        <p>
-            <img src="ˇ~/Images/kutse.png" />
-        </p>
+    @:Väga kurb uudis.Mäeme hiljem!
+    <p>
+        <img src="ˇ~/Images/sad.jpg" />
+    </p>
     }
-    @ViewBag.Message @*ViewBag.Message -отчет об отправке письма с приглашением *@
+    <!--@ViewBag.Message--> @*ViewBag.Message -отчет об отправке письма с приглашением *@
 </div>
+
